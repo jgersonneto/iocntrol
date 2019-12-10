@@ -1,0 +1,32 @@
+type User {
+    NOME: String!
+    PRIORI: String!
+}
+
+type Evento {
+    EVENTO: String!
+    Produto {
+        NOME: String
+        INQTD: int
+        OUTQTD: int
+    }
+}
+
+type Produto {
+    NOME: String!
+    QTD: int!
+}
+
+type UserQuery {
+    users: [User]
+}
+
+type EventoQuery {
+    eventos: [Evento]
+}
+
+type UserQuery {
+    users: [User]
+}
+
+type Mu
