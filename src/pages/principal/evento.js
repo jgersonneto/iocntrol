@@ -32,8 +32,9 @@ export default class Evento extends Component {
         </TouchableOpacity>
         <TouchableOpacity
           style={Styles.botao}
-          //onPress={ () => {this.props.navigation.navigate('Main')} }
-        >
+          onPress={() => {
+            this.props.navigation.navigate('AltEvento');
+          }}>
           <Text style={Styles.texto}>ALTERAR</Text>
         </TouchableOpacity>
       </View>

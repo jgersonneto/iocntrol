@@ -1,16 +1,22 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import Styles from '../../../styles/stylesEvento';
 //import {ApolloProvider} from 'react-apollo';
-import Inserir from '../../../components/inserir';
-//import apolloClient from '../../services/apollo';
 
-export default class Evento extends Component {
+//import {Card} from 'native-base';
+//import client from '../../../services/apollo';
+//import Inserir from '../../../components/inserirE';
+
+class Evento extends Component {
   render() {
     return (
+      //<ApolloProvider client={client}>
       <View style={Styles.container}>
-        <Inserir />
+        <Text>NETO</Text>
       </View>
+      //</ApolloProvider>
     );
   }
 }
+
+export default Evento;

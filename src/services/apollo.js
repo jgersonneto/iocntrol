@@ -3,7 +3,7 @@ import {HttpLink} from 'apollo-link-http';
 import {InMemoryCache} from 'apollo-cache-inmemory';
 
 const httplink = new HttpLink({
-  uri: 'https://iocontrolserver.herokuapp.com/v1/graphql',
+  uri: 'http://iocontrolserver.herokuapp.com/v1/graphql',
 });
 
 const client = new ApolloClient({

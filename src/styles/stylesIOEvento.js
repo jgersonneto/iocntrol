@@ -1,0 +1,85 @@
+import {StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 200,
+    backgroundColor: '#2c3e50',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+  containerScroll: {
+    flex: 1,
+    backgroundColor: '#2c3e50',
+    alignContent: 'center',
+  },
+  containerTexto: {
+    flex: 1,
+    width: 300,
+    height: 40,
+    marginTop: 200,
+    marginStart: 30,
+    backgroundColor: '#2c3e50',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start',
+    //alignContent: 'flex-start',
+  },
+  containerTexto1: {
+    flex: 1,
+    width: 340,
+    marginTop: 10,
+    marginStart: 10,
+    backgroundColor: '#D8D8D8',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    //alignContent: 'flex-start',
+  },
+  containerCheckBox: {
+    flex: 1,
+    backgroundColor: '#2c3e50',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+  containerBotao: {
+    flex: 1,
+    height: 60,
+    marginStart: 10,
+    backgroundColor: '#2c3e50',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    alignContent: 'flex-end',
+  },
+  textoBotao: {
+    color: '#FFF',
+  },
+  texto: {
+    color: '#0962F1',
+    textAlign: 'left',
+    marginTop: 10,
+  },
+  input: {
+    padding: 1,
+    width: 300,
+    justifyContent: 'flex-start',
+    backgroundColor: '#FFF',
+    fontSize: 15,
+    fontWeight: 'bold',
+    borderRadius: 2,
+  },
+  botao: {
+    width: 300,
+    height: 42,
+    marginStart: 30,
+    backgroundColor: '#3498db',
+    marginTop: 10,
+    borderRadius: 4,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 10,
+  },
+});
+
+export default styles;

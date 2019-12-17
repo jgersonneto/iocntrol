@@ -4,7 +4,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import Evento from '../../principal/evento';
 import CadEvento from './CadEvento';
 import EventoIO from './IOEvento';
-//import AltEvento from './AltEvento';
+import AltEvento from './MatEvento';
 
 const eventoNavigator = createStackNavigator(
   {
@@ -20,8 +20,18 @@ const eventoNavigator = createStackNavigator(
         tabBarLabel: 'CADEVENTO',
       },
     },
-    EventoIO: EventoIO,
-    //AltEvento: AltEvento,
+    EventoIO: {
+      screen: EventoIO,
+      navigationOptions: {
+        tabBarLabel: 'IOEVENTO',
+      },
+    },
+    AltEvento: {
+      screen: AltEvento,
+      navigationOptions: {
+        tabBarLabel: 'MATEVENTO',
+      },
+    },
   },
   {
     initialRouteName: 'Evento',

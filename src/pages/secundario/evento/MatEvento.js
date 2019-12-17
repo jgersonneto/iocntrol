@@ -8,18 +8,21 @@ import {
 } from 'react-native';
 import {ApolloProvider} from 'react-apollo';
 import client from '../../../services/apollo';
-import Styles from '../../../styles/stylesQueryEvento';
-import QueryEvento from '../../../components/queryEvento';
-import MutationEvento from '../../../components/mutationEvento';
+import Styles from '../../../styles/stylesIOEvento';
+import QueryMatEvento from '../../../components/queryMatEvento';
+import MutationMatEvento from '../../../components/mutationMatEvento';
 
-export default class CadProduto extends Component {
+export default class MatEvent extends Component {
   static navigationOptions = {
-    title: 'CADEVENTO',
+    title: 'EVENTO',
   };
 
   constructor(props) {
     super(props);
-    this.state = {Atualiza: true};
+    this.state = {
+      Atualiza: true,
+      Nevento: String,
+    };
   }
 
   componentDidMount() {
@@ -36,12 +39,17 @@ export default class CadProduto extends Component {
       <ApolloProvider client={client}>
         <ScrollView style={Styles.containerScroll}>
           <View style={Styles.containerTexto1}>
-            <Text style={Styles.texto}>EVENTOS:</Text>
-            <QueryEvento />
+            <Text style={Styles.texto}>MATERIAL DO EVENTO:</Text>
+            <TextInput
+              style={Styles.input}
+              placeholder="Digite o nome do Evento"
+              onChangeText={nevento => this.setState({Nevento: nevento})}
+            />
+            <QueryMatEvento nome={this.state.Nevento} />
           </View>
 
           <View style={Styles.container}>
-            <MutationEvento />
+            <MutationMatEvento />
           </View>
         </ScrollView>
       </ApolloProvider>
